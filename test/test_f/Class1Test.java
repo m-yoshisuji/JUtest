@@ -64,7 +64,8 @@ public class Class1Test {
     //テストデータ
     @SuppressWarnings("serial")
 	final List<String> sample = new ArrayList<String>() {{add("a"); add("b"); add("c"); add("d");}};
-	final List<String> sample2 = new ArrayList<String>() {/**
+	final List<String> sample2 = new ArrayList<String>() {
+		/**
 		 * 
 		 */
 		private static final long serialVersionUID = -6964514288375744264L;
@@ -181,5 +182,5 @@ public class Class1Test {
     public static void doAfterClass() {
         //System.out.println("Now doAfterClass..");
     }
-
+  
 }

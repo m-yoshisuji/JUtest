@@ -4,6 +4,22 @@ public class Class1 {
 	
 	public static void main(String[] args){
 		
+		//Class2をインスタンス
+		Class2 class2 = new Class2();
+		
+		//
+		
+		
+		//変数に値を設定
+		class2.num1 = 123456789;
+		class2.num2 = 222222222;
+		class2.num3 = 999999999;
+		
+	}
+	
+	/**
+	public static void main(String[] args){
+		
 		//配列
 		int num1 = 123456789;
 		int num2 = 222222222;
@@ -43,6 +59,6 @@ public class Class1 {
 		String[] splited1 = mt1.split("た");
 		String[] splited2 = mt2.split("た");
 		System.out.println(splited1[0] + "た" + splited2[1]);
-	}
+	}**/
 
 }

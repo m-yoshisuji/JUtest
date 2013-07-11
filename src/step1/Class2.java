@@ -1,11 +1,17 @@
 package step1;
 
 public class Class2 {
-	/**
+	
+	public int num1;
+	public int num2;
+	public int num3;	
+
+/**
 	 * 
 	 * @param args
 	 */
 	public static void t_method1(String[] args){
+	
 	//”z—ñ
 	int num1 = 123456789;
 	int num2 = 222222222;
