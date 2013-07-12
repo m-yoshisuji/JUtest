@@ -1,7 +1,10 @@
 package step1;
 
 public class Class4 {
-	
+
+	String disp1;
+	String disp2;
+	String disp3;	
 	/**
 	 * 
 	 * @param msg
@@ -16,16 +19,19 @@ public class Class4 {
 	 * 
 	 * @param args
 	 */
-	public static void t_method1(int num1,int num2,int num3){
+	public void t_method1(int num1,int num2,int num3){
 	
 	//配列
 	int[] n = new int []{num1,num2,num3};
 	String kihon = "No";
+	
+	disp1 = kihon + n[0];
+	disp2 = kihon + n[2];
+	disp3 = "配列の要素数は" + n.length + "個";
+	
 
-	System.out.println(kihon + n[0]);
-	System.out.println(kihon + n[2]);
-	System.out.println("配列の要素数は" + n.length + "個");
 	}
+	
 	
 	
 
