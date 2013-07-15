@@ -77,8 +77,6 @@ public class Class3Test {
 	String disp8;
 	String disp9;
 	
-
-
 	
     //入力データ
 	int a = 10;
@@ -88,19 +86,26 @@ public class Class3Test {
     
     @Test
     public void test_x() {
-		class3.t_method1(123456789, 222222222, 999999999);//1回目
-    	disp4 = class3.disp4;
-    	disp5 = class3.disp5;
-    	disp6 = class3.disp6;
-    	disp7 = class3.disp7;
-    	disp8 = class3.disp8;
-    	disp9 = class3.disp9;
+        Class3 class3 = new Class3();
+		class3.main(123456789, 222222222, 999999999);//1回目の処理に入力値を設定
+
+    	//エラー処理
     	System.err.println("test5");
+    	
+		//テスト結果の確認
+    	assertThat(disp4,is (""));
+    	assertThat(disp5,is (""));
+    	assertThat(disp6,is ("")); 
+    	assertThat(disp7,is (""));
+    	assertThat(disp8,is (""));
+    	assertThat(disp9,is (""));
+    	
+
         //文字列がNotNullだったら成功
-        assertNotNull();
+        //assertNotNull();
         
         //期待値と実績値が同じ参照をしていない場合は正常終了。
-        assertNotSame(sample2.toString(),sample.toString());
+        //assertNotSame(sample2.toString(),sample.toString());
         
         //
         //assertThat(sample2.toString(),);
