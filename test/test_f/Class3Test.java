@@ -21,100 +21,57 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import step1.Class3;
-
-/**
- * 
- * @author m.yoshisuji
- *コミットテスト１
- */
+import step1.Class4;
 
 
 public class Class3Test {
 
 
-    /**
-     * 
-     * テストクラスの最初に呼ばれる処理
-     * 
-     */
     @BeforeClass
     public static void doBeforeClass() {
         //System.out.println("Now doBeforeClass..");
     }
-
-    /**
-     * 
-     * ＠Testを指定したメソッドにAssume.assumeThatで前提条件を記述し、
-     * Assert.assertThatで条件をチェックしている
-     * 前提条件を何も記述しない場合と比較して、
-     * このようにユニットテストコードとして記述しておけば、
-     * 実行環境が想定しているものと同じかどうかをテスト時にチェックできる
-     * 
-     * Assumeはテストをする上での前提条件をテストするための機能です
-     * もしも、前提条件が崩れるのならば、後に続くテストは無意味と判断し
-     * テスト全体に対して影響を与えないようにテスト成功として扱うという意味になります
-     * 
-     * 
-     */
-    @Test
-	public void assertThatTest() {
-    	System.err.println("assertThatTest");
-
-	}
 
     
     //テストデータ
     @SuppressWarnings("serial")
     
 	//テスト対象のクラスをインスタンス
-    Class3 class3 = new Class3();
+    Class4 class4 = new Class4();
     
 	//結果を格納する変数
-	String disp4;
-	String disp5;
-	String disp6;
-	String disp7;
-	String disp8;
-	String disp9;
-	
-	
-    //入力データ
-	int a = 10;
-	int b = 20;
-	int c = 30;
+	String d4;
+	String d5;
+	String d6;
+	String d7;
+	String d8;
+	String d9;
 
     
     @Test
-    public void test_x() {
-        Class3 class3 = new Class3();
-		class3.main(123456789, 222222222, 999999999);//1回目の処理に入力値を設定
-
+    public void test_1() {
+		class4.t_method1("123456789","222222222","999999999");//1回目の処理に入力値を設定
+		
+		d4 = class4.disp1;
+		d5 = class4.disp2;
+		d6 = class4.disp3;
+		
     	//エラー処理
     	System.err.println("test5");
     	
 		//テスト結果の確認
-    	assertThat(disp4,is (""));
-    	assertThat(disp5,is (""));
-    	assertThat(disp6,is ("")); 
-    	assertThat(disp7,is (""));
-    	assertThat(disp8,is (""));
-    	assertThat(disp9,is (""));
-    	
-
-        //文字列がNotNullだったら成功
-        //assertNotNull();
-        
-        //期待値と実績値が同じ参照をしていない場合は正常終了。
-        //assertNotSame(sample2.toString(),sample.toString());
-        
-        //
-        //assertThat(sample2.toString(),);
+    	assertThat(d4,is ("No123456789"));
+    	assertThat(d5,is ("No999999999"));
+    	assertThat(d6,is ("配列の要素数は3個")); 
+    	/**
+    	assertThat(d7,is ("No10"));
+    	assertThat(d8,is ("No30"));
+    	assertThat(d9,is ("配列の要素数は3個"));
+		**/
     }
     
  
 	/**
-     * 
-     */
     @Test
 	public void test1() {
     	System.err.println("test1");
@@ -142,9 +99,6 @@ public class Class3Test {
 
 
 
-    /**
-     * 
-     */
     @Test
     public void test2() {
     	System.err.println("test2");
@@ -158,9 +112,7 @@ public class Class3Test {
         assertThat(sample, everyItem(is(not("e"))));
     }
 
-    /**
-     * 
-     */
+
     @Test
     public void test3() {
     	System.err.println("test3");
@@ -176,9 +128,6 @@ public class Class3Test {
     
 
     
-    /**
-     * 
-     */
     @Test
     public void test5() {
     	System.err.println("test5");
@@ -187,6 +136,7 @@ public class Class3Test {
     	assertEquals(sample2.toString(),sample2.toString());
     }
    
+   **/
     
     
     //--------------------------------------------------------------------------
